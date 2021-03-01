@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { book } from './../../../../navigation/book';
 
-import droplistIcon from '../../../../img/droplistIcon.svg';
+import droplistIcon from '../../../../assets/droplistIcon.svg';
 
 type NavItemProps = {
   title: string,

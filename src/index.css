@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'Druk';
+  src: local('Druk'),
+    url('./source/fonts/Druk-Wide-Medium.woff') format('woff'),
+    url('./source/fonts/Druk-Wide-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 640px;
 }
 
 ol,
@@ -26,4 +40,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  width: 100vw;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
 }

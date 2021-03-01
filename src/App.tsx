@@ -1,5 +1,3 @@
-import './source/theme/App.css';
-
 import { BrowserRouter } from 'react-router-dom';
 import { Routes } from './source/navigation';
 

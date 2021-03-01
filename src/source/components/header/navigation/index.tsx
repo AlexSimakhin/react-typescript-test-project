@@ -3,7 +3,7 @@ import { NavItem } from './navItem/index';
 interface MenuList {
   name: string
   droplist: boolean
-}
+};
 
 const menuList: MenuList[] = [
   { name: 'GAME', droplist: false},

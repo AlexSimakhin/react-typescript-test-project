@@ -2,14 +2,26 @@ import { Link } from 'react-router-dom';
 
 import { book } from './../../navigation/book';
 
-import riotLogo from '../../img/RiotGamesLogo.svg';
-import valorantLogo from '../../img/ValorantLogo.svg';
+import { StyledHeader } from './style';
+
+import riotLogo from '../../assets/RiotGamesLogo.svg';
+import valorantLogo from '../../assets/ValorantLogo.svg';
+import droplistIcon from '../../assets/droplistIcon.svg';
+import userAvatar from '../../assets/UserAvatar.png';
+
 import { Navigation } from './navigation/index';
 
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const user = {
+    name: 'Alex',
+    avatar: userAvatar,
+  };
+
+  const { name, avatar } = user;
+  
   return (
-    <header className={'header'}>
+    <StyledHeader>
       <div className={'header__left-side'}>
 
         <div className={'logotips'}>
@@ -36,7 +48,18 @@ export const Header = () => {
 
       </div>
 
-      {/* <UserProfile /> */}
-    </header>
+      <div className={'user-profile'}>
+
+        <Link to={'/'} className={'user-info'}>
+          <img className={'user-avatar'} src={avatar} alt={'Avatar'} />
+          <p>{name}</p>
+        </Link>
+
+        <div className={'user-settings'}>
+          <img className={'user-settings__droplist'} src={droplistIcon} alt={'Settings'} />
+        </div>
+
+      </div>
+    </StyledHeader>
   );
 };
