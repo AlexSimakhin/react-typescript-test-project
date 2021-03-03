@@ -50,6 +50,10 @@ export const StyledMain = styled.main<{ bgImage: string }>`
     -webkit-text-stroke-color: rgb(255, 255, 255);
 
     transform: rotateZ(90deg);
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   .char-list {
@@ -87,10 +91,10 @@ export const StyledMain = styled.main<{ bgImage: string }>`
 
   .char-card h3 {
     position: fixed;
-    z-index: 9;
+    z-index: 9999;
+    /* z-index: 9; */
 
     font: 500 48px 'Druk', sans-serif;
-    line-height: 136px;
     letter-spacing: 0.1em;
 
     color: transparent;
@@ -98,18 +102,28 @@ export const StyledMain = styled.main<{ bgImage: string }>`
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
 
-    transform: translate(-48%, 100%) rotateZ(90deg);
+    transform-origin: 0 100%;
+    transform: translate(-30px, -30px) rotateZ(90deg);
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   .char-card p {
     position: absolute;
-    z-index: 8;
+    z-index: 8888;
+    /* z-index: 8; */
 
     font: 500 16px 'Druk', sans-serif;
-    line-height: 21px;
     letter-spacing: 0.1em;
     color: #FF4656;
 
-    transform: translate(-27%, 580%) rotateZ(90deg);
+    transform-origin: 0 100%;
+    transform: translate(30px, 10px) rotateZ(90deg);
+
+    &:hover {
+      cursor: default;
+    }
   }
 `;

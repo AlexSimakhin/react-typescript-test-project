@@ -2,5 +2,6 @@ export interface CharactersList {
   name: string,
   nationality: string,
   img: string,
-  skills: string[],
+  skills: any[],
+  className: string,
 };
