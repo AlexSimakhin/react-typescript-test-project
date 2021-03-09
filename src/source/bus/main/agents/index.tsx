@@ -1,3 +1,5 @@
+import { Slider } from '../slider';
+
 import { Character } from '../character';
 import { CharactersList } from './../interface';
 
@@ -5,7 +7,9 @@ type AgentsProps = {
   charactersList: CharactersList[],
 };
 
-export const Agents: React.FC<AgentsProps> = ({charactersList}) => {
+export const Agents: React.FC<AgentsProps> = ({ charactersList }) => {
+  const onSlideChange = (index: any) => console.log(`changed to slide ${index}`);
+
   const charactersListJSX = charactersList.map(item => {
     return (
       <Character key={item.name} character={item} />
@@ -19,9 +23,15 @@ export const Agents: React.FC<AgentsProps> = ({charactersList}) => {
         <h1 className={'title'}>AGENTS</h1>
       </div>
 
-      <div className={'character-list'}>
+      
+      <Slider
+        slidesAtOnce={4}
+        activeIndex={0}
+        onSlideChange={onSlideChange}
+      >
         {charactersListJSX}
-      </div>
+      </Slider>
+      
 
     </section>
   );

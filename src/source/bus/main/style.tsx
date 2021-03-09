@@ -62,11 +62,11 @@ export const StyledMain = styled.main<{ bgImage: string }>`
     align-items: center;
   }
 
-  .character-list {
+  /* .character-list {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
   .char-card {
     position: relative;
